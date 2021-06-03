@@ -11,6 +11,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 {            
     var engine = Python.CreateEngine();
     var scope = engine.CreateScope();
+    
     scope.SetVariable("count", 10);
     scope.SetVariable("sum", 0);
     string s = "for i in range(0, count):\n\tsum=sum+i\n";
