@@ -8,19 +8,18 @@ In the two projects, there will be a button test on the interface after startup.
 ### Keycode In Demo
 ```
 private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-            var engine = Python.CreateEngine();
-            var scope = engine.CreateScope();
-            scope.SetVariable("count", 10);
-            scope.SetVariable("sum", 0);
-            string s = "for i in range(0, count):\n\tsum=sum+i\n";
-            engine.Execute(s, scope);
-            int sum = scope.GetVariable<int>("sum");
+{            
+    var engine = Python.CreateEngine();
+    var scope = engine.CreateScope();
+    scope.SetVariable("count", 10);
+    scope.SetVariable("sum", 0);
+    string s = "for i in range(0, count):\n\tsum=sum+i\n";
+    engine.Execute(s, scope);
+    int sum = scope.GetVariable<int>("sum");
 
-            MessageDialog dialog = new MessageDialog($"{sum}");
-            await dialog.ShowAsync();
-        }
+    MessageDialog dialog = new MessageDialog($"{sum}");
+    await dialog.ShowAsync();
+}
 ```
 
 ### Progress
