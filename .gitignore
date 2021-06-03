@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/IronPython_Sample/v16
+/IronPython2/bin/x86
+/IronPython2/obj
+/IronPython3/obj
